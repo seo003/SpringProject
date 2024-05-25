@@ -16,11 +16,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import kr.co.inhatcspring.database.MapperInterface;
 
-//Spring MVC 프로젝트에 관련된 설정을 하는 클래스
 @Configuration
-//Controller 어노테이션이 세팅되어 있는 클래스를 Controller로 등록한다.
 @EnableWebMvc
-//스캔할 패키지 지정
 @ComponentScan("kr.co.inhatcspring.controller")
 @PropertySource("/WEB-INF/properties/db.properties")
 public class ServletAppContext implements WebMvcConfigurer {
@@ -37,21 +34,18 @@ public class ServletAppContext implements WebMvcConfigurer {
 	@Value("${db.password}")
 	private String db_password;
 
-	// Controller의 메서드가 반환하는 jsp의 이름 앞뒤에 경로와 확장자를 불러주도록 설정
 	@Override
 	public void configureViewResolvers(ViewResolverRegistry registry) {
 		WebMvcConfigurer.super.configureViewResolvers(registry);
 		registry.jsp("/WEB-INF/views/", ".jsp");
 	}
 
-	// 정적 파일 경로 매핑
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		WebMvcConfigurer.super.addResourceHandlers(registry);
 		registry.addResourceHandler("/**").addResourceLocations("/resources/");
 	}
 
-	// 데이터베이스 접속 정보 관리
 	@Bean
 	public BasicDataSource dataSource() {
 		BasicDataSource source = new BasicDataSource();
