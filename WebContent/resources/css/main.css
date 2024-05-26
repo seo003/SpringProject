@@ -1965,7 +1965,7 @@ button.alt:active,
 	font-size: 0.85em;
 	letter-spacing: 2px;
 	padding: 0.25em 1em 0.25em 1em;
-	margin: 0 0 2.5em 0;
+	/*margin: 0 0 2.5em 0;*/
 }
 
 /* Icons */
@@ -3280,5 +3280,10 @@ button.alt:active,
     background: #FF6B6B;
 }
 
+.route {
+	margin-bottom:0;
+}
 
-
+#info {
+	text-align:center;
+}

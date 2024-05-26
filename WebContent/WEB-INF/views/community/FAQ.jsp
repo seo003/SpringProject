@@ -10,8 +10,8 @@
 </div>
 </section>
 
-<!-- Main -->
 <section id="features">
+	<!-- 파라미터 전달 -->
 	<a href="write?category=1" class="button">글쓰기</a> <br> <br>
 	<div class="container">
 		<div class="table-wrapper">
@@ -23,7 +23,7 @@
 				</thead>
 				<tbody>
 					<c:forEach var='list' items='${boardList }'>
-						<tr>
+						<tr><!-- 파라미터 전달 -->
 							<td><a href="view?idx=${list.idx }">${list.title }</a></td>
 						</tr>
 					</c:forEach>

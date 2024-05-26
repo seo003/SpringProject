@@ -7,6 +7,7 @@
 
 	<a href="board">커뮤니티</a>
 </h1>
+<!-- 카테고리에 맞춰 내용 변경 -->
 <c:choose>
 	<c:when test="${category == 0}">
 		<p>공지사항</p>
@@ -26,6 +27,7 @@
 		<div id="content" class="col-8 col-12-medium">
 			<article class="box post">
 				<form action='write' method='post'>
+					<!-- type을 hidden으로 하여 category값도 같이 전달 -->
 					<input type='hidden' name='category' value='${category }' />
 					<header>
 						<input type='text' name='title' placeholder='제목' /><br>
@@ -33,7 +35,7 @@
 					</header>
 					<textarea class='content' type='text' name='content'
 						placeholder='내용' /></textarea>
-					<!-- 버튼 -->
+					
 					<ul class="actions">
 						<li><button type='button icon solid fa-file'>글쓰기</button></li>
 					</ul>

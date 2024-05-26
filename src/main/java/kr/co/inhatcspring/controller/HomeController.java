@@ -13,14 +13,9 @@ public class HomeController {
 	public String home() {
 		return "index";
 	}
-	
-	@GetMapping("/introdution")
-	public String introdution() {
-		return "majorInfo/introdution";
-	}
-	
-	@GetMapping("/history")
-	public String history() {
-		return "majorInfo/history";
+
+	@GetMapping("/wayToCome")
+	public String wayToCome() {
+		return "wayToCome";
 	}
 }
