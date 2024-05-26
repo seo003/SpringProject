@@ -20,6 +20,7 @@
 					<!-- 버튼 -->
 					<ul class="actions">
 						<li><a href="edit?idx=${board.idx }" class="button icon solid fa-file">수정하기</a></li>
+						<li><a onclick="confirmDelete(${board.idx},${board.category })" class="button icon solid fa-file">삭제하기</a></li>
 					</ul>
 				</article>
 			</div>
@@ -28,3 +29,11 @@
 </section>
 
 <%@include file="../footer.jsp"%>
+
+<script>
+function confirmDelete(idx,category) {
+    if (confirm("정말 삭제하시겠습니까?")) {
+        window.location.href = "delete?idx=" + idx +"&category="+category;
+    }
+}
+</script>

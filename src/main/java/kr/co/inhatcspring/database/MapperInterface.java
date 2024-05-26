@@ -2,6 +2,7 @@ package kr.co.inhatcspring.database;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
@@ -32,4 +33,8 @@ public interface MapperInterface {
 	// 게시물 수정
 	@Update("update schoolPost set title=#{title}, content=#{content} where idx = #{idx}")
 	void editBoard(Board board);
+	
+	// 게시물 삭제
+	@Delete("delete from schoolPost where idx = #{idx}")
+	void deleteBoard(int idx);
 }
