@@ -1,0 +1,25 @@
+-- 테이블 생성
+CREATE TABLE schoolPost (
+    idx NUMBER NOT NULL,
+    title VARCHAR2(100) NOT NULL,
+    content VARCHAR2(100) NOT NULL,
+    category NUMBER NOT NULL,
+    CONSTRAINT schoolPost_pk PRIMARY KEY (idx)
+);
+
+-- 시퀀스 생성
+CREATE SEQUENCE schoolPost_seq
+START WITH 1
+INCREMENT BY 1
+NOCACHE
+NOCYCLE;
+
+-- 트리거 생성
+CREATE OR REPLACE TRIGGER schoolPost_trigger
+BEFORE INSERT ON schoolPost
+FOR EACH ROW
+BEGIN
+    :new.idx := schoolPost_seq.NEXTVAL;
+END;
+/
+

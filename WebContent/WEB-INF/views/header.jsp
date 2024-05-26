@@ -37,12 +37,14 @@
 						</li>
 						<li><a href="#" class="icon fa-chart-bar"><span>커뮤니티</span></a>
 							<ul>
-								<li><a href="#">공지사항</a></li>
-								<li><a href="#">FAQ</a></li>
-								<li><a href="#">자유게시판</a></li>
+								<li><a href="announce">공지사항</a></li>
+								<li><a href="FAQ">FAQ</a></li>
+								<li><a href="board">자유게시판</a></li>
 							</ul>
 						</li>
 						<li><a class="icon solid fa-retweet"
-							href="right-sidebar.html"><span>로그인</span></a></li>
+							href="#"><span>오시는 길</span></a></li>
+						<li><a class="icon solid fa-retweet"
+							href="#"><span>로그인</span></a></li>
 					</ul>
 				</nav>
