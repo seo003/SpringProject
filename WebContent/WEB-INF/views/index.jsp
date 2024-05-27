@@ -9,4 +9,5 @@
 </div>
 </section>
 
+<!-- 아랫부분(footer)을 따로 만들어 include -->
 <%@include file="footer.jsp"%>

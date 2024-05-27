@@ -1,6 +1,7 @@
 -- 테이블 생성
 CREATE TABLE schoolPost (
     idx NUMBER NOT NULL,
+    userId VARCHAR2(50),
     title VARCHAR2(100) NOT NULL,
     content VARCHAR2(100) NOT NULL,
     category NUMBER NOT NULL,

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<!-- 윗부분(header)을 따로 만들어 include -->
 <%@include file="../header.jsp"%>
 <!-- Logo -->
 <h1 id="logo">
@@ -31,4 +32,5 @@
 		</div>
 </section>
 
+<!-- 아랫부분(footer)을 따로 만들어 include -->
 <%@include file="../footer.jsp"%>
