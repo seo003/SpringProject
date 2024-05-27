@@ -14,6 +14,7 @@
 			<div id="content" class="col-8 col-12-medium">
 				<article class="box post">
 					<form action='edit' method='post'>
+						<!-- model에서 전달된 board의 값 출력 -->
 						<input type='hidden' name='idx' value='${board.idx}'>
 						<header>
 							<input type='text' name='title' value='${board.title }'/><br><br>

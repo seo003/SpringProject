@@ -3,6 +3,7 @@ package kr.co.inhatcspring.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+// 교과과정 컨트롤러
 @Controller
 public class CurriculumController {
 

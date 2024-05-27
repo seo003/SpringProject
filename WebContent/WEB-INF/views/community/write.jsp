@@ -27,7 +27,7 @@
 		<div id="content" class="col-8 col-12-medium">
 			<article class="box post">
 				<form action='write' method='post'>
-					<!-- type을 hidden으로 하여 category값도 같이 전달 -->
+					<!-- type을 hidden으로 하여 category값도 같이 전달 -> category에 맞춰 글 저장 -->
 					<input type='hidden' name='category' value='${category }' />
 					<header>
 						<input type='text' name='title' placeholder='제목' /><br>
